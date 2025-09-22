@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Y. Saran - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Profile Box */
+    .profile-box {
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .profile-box h2 {
+      margin-bottom: 15px;
+      color: #0a66c2;
+    }
+    .profile-box button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .profile-box button:hover {
+      background-color: darkred;
+    }
+
+    /* Portfolio Header */
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #0a66c2;
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 36px;
+    }
+    header h2 {
+      font-weight: normal;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0a66c2;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #0a66c2;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 50%;
+      margin: 15px 0;
+      border: 3px solid #0a66c2;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #0a66c2;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* Skills */
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+      padding: 0;
+    }
+    ul li {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    ul li:hover {
+      background: #0a66c2;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Project Links */
+    a {
+      color: #0a66c2;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: darkred;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      background: #0a66c2;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-box">
+    <h2>Welcome, <span id="profileUsername"></span></h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <header>
+    <h1>Y. Saran</h1>
+    <h2>BCA Cyber Security Student | Aspiring Web Developer</h2>
+  </header>
+
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I am Y. Saran, a BCA Cyber Security student with a passion for web development.
+       I enjoy learning new technologies and building creative projects using HTML and CSS.
+       My goal is to grow as a developer while improving my problem-solving and teamwork skills.</p>
+
+    <img src="your-photo.jpg" alt="Y. Saran">
+
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Degree</th>
+        <th>Institution</th>
+        <th>Year</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>12th Grade</td>
+        <td>P.S Higher Secondary School</td>
+        <td>2022</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>BCA Cyber Security</td>
+        <td>Hindustan Institute of College</td>
+        <td>2022–2025</td>
+        <td>7.03</td>
+      </tr>
+    </table>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Problem Solving</li>
+      <li>Team Collaboration</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <h3>1. Personal Portfolio Website</h3>
+    <p>A responsive website showcasing my skills, education, and projects.</p>
+    <a href="#" target="_blank">View on GitHub</a>
+
+    <h3>2. Student Management Page</h3>
+    <p>A basic project displaying student details using HTML tables and lists.</p>
+    <a href="#" target="_blank">View on GitHub</a>
+
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:ysaran444@gmail.com">ysaran444@gmail.com</a></p>
+    <p>Phone: +91-8838720572</p>
+    <p>Address: Chennai, Besant Nagar</p>
+  </div>
+
+  <footer>
+    <p>©️ 2025 Y. Saran | All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
